@@ -1,13 +1,15 @@
 let homePage = require('./homePage')
 
-let movies = homePage.leerJSON()
+let movies = homePage.peliculas()
 
 module.exports = {
     homePage : function(req,res){
-        movies.movies.forEach(movie => {
-            res.write(movie.title +'\n')
+        res.write(`${homePage.titulo} \n\n`)
+        res.write(`${homePage.mensaje} \n\n`)
+        res.write(`Total de películas: ${homePage.total()} \n\n`)
+        movies.forEach(movie => {
+            res.write(`Título: ${movie.title} \n\n`)
         });
-        
         res.end()
     },
     enCartelera : function(req,res){

@@ -9,11 +9,11 @@ module.exports = {
     },
     titulo : `
     █ █▄░█ █ █▀▀ █ █▀█
-    █ █░▀█ █ █▄▄ █ █▄█`, 
+    █ █░▀█ █ █▄▄ █ █▄█\n\n`, 
     peliculas : function(){
         return this.leerJSON().movies.sort((a, b) => (a.title > b.title)?1:(a.title < b.title)?-1:0)
     },
     mensaje : `​Bienvenidos a DH Movies el mejor sitio para encontrar las mejores
     películas, incluso mucho mejor que Netflix, Cuevana y PopCorn​.
-    `
+    \n\n`
 }
