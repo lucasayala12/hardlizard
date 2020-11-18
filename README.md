@@ -1,6 +1,7 @@
 # Grupo nro...
 ## Trabajo: Hard Lizard
 ## Integrantes:
-- Fulano
-- Zutano
-- Mengano
+- Marcos patiño
+- Melany Lopez
+- Lucas Enriquez 
+- Lucas Ayala
