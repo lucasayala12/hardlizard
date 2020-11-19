@@ -1,6 +1,8 @@
 let homePage = require('./homePage')
+let enCartelera = require('./enCartelera')
 
 let movies = homePage.peliculas()
+let peliculas = enCartelera.peliculas()
 
 module.exports = {
     homePage : function(req,res){
@@ -13,7 +15,12 @@ module.exports = {
         res.end()
     },
     enCartelera : function(req,res){
+        res.write(`${enCartelera.titulo} \n\n `)
+        res.write(`Total de peliculas: ${enCartelera.total()} \n\n `)
+        peliculas.forEach(peliculas => {
+            res.write(`Título: ${peliculas.title} \n Descripción: ${peliculas.overview} \n\n `)
 
+        })
     },
     masVotadas : function(){
 
