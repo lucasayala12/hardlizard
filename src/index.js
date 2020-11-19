@@ -57,7 +57,7 @@ module.exports = {
         res.write(`${sucursales.titulo}\n\n`)
         res.write(`Contamos con ${sucursales.total()} sucursales\n\n`)
         teatros.forEach(sucursal => {
-            res.write(`Sucursal: ${sucursal.name} \n Dirección: ${sucursal.addres} \n Descripción: ${sucursal.description} \n Total de salas: ${sucursal.total_rooms}\n\n`)
+            res.write(`Sucursal: ${sucursal.name} \n Dirección: ${sucursal.address} \n Descripción: ${sucursal.description} \n Total de salas: ${sucursal.total_rooms}\n\n`)
         })
         res.end()
     }
