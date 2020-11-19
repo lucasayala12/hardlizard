@@ -14,5 +14,17 @@ module.exports = {
     },
     enCartelera : function(req,res){
 
+    },
+    masVotadas : function(){
+
+    },
+    contacto : function(){
+
+    },
+    preguntasFrecuentes : function (){
+
+    },
+    sucursales : function (){
+
     }
 }
