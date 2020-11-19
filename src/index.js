@@ -2,6 +2,10 @@ let homePage = require('./homePage')
 let movies = homePage.peliculas()
 let masVotadas = require('./masVotadas')
 let votadas = masVotadas.masVotadas()
+let enCartelera = require('./enCartelera')
+let preguntasFrecuentes = require("./preguntasFrecuentes")
+let peliculas = enCartelera.peliculas()
+let preguntas = preguntasFrecuentes.preguntas
 
 module.exports = {
     homePage : function(req,res){
@@ -14,7 +18,13 @@ module.exports = {
         res.end()
     },
     enCartelera : function(req,res){
+        res.write(`${enCartelera.titulo} \n\n `)
+        res.write(`Total de peliculas: ${enCartelera.total()} \n\n `)
+        peliculas.forEach(peliculas => {
+            res.write(`Título: ${peliculas.title} \n Descripción: ${peliculas.overview} \n\n `)
 
+        })
+        res.end()
     },
     masVotadas : function(req,res){
         res.write(masVotadas.titulo+'\n\n')
@@ -26,10 +36,11 @@ module.exports = {
         res.end()
     },
     contacto : function(){
+        
 
     },
     preguntasFrecuentes : function (){
-
+        
     },
     sucursales : function (){
 

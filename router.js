@@ -13,7 +13,7 @@ module.exports = function(req,res){
             index.sucursales(req,res)
             break;
         case "/preguntas-frecuentes":
-            index.pregntasFrecuentes(req,res)
+            index.preguntasFrecuentes(req,res)
             break;
         case "/mas-votadas":
             index.masVotadas(req,res)
