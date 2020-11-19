@@ -35,14 +35,11 @@ module.exports = {
         })
         res.end()
     },
-    contacto : function(){
-        
+    contacto : function(){ 
+  },
 
-    },
+
     preguntasFrecuentes : function (){
         
     },
-    sucursales : function (){
-
-    }
-}
+    sucursales : function (){}}
