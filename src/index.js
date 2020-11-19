@@ -1,8 +1,10 @@
 let homePage = require('./homePage')
 let enCartelera = require('./enCartelera')
+let preguntasFrecuentes = require("./preguntasFrecuentes")
 
 let movies = homePage.peliculas()
 let peliculas = enCartelera.peliculas()
+let preguntas = preguntasFrecuentes.preguntas
 
 module.exports = {
     homePage : function(req,res){
@@ -21,15 +23,17 @@ module.exports = {
             res.write(`Título: ${peliculas.title} \n Descripción: ${peliculas.overview} \n\n `)
 
         })
+        res.end()
     },
     masVotadas : function(){
-
+        
     },
     contacto : function(){
+        
 
     },
     preguntasFrecuentes : function (){
-
+        
     },
     sucursales : function (){
 
