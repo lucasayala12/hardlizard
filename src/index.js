@@ -19,7 +19,7 @@ module.exports = {
     masVotadas : function(req,res){
         res.write(masVotadas.titulo+'\n\n')
         res.write(`El total de peliculas es: ${masVotadas.total()}\n`)
-        res.write(`El valoración general es: ${masVotadas.promedio()}\n`)
+        res.write(`El valoración general es: ${masVotadas.promedio()}\n\n`)
         votadas.forEach(peli => {
             res.write(`-${peli.title}\nValoración: ${peli.vote_average}\n${peli.overview}\n\n`)
         })
