@@ -1,6 +1,7 @@
 let homePage = require('./homePage')
-
 let movies = homePage.peliculas()
+let masVotadas = require('./masVotadas')
+let votadas = masVotadas.masVotadas()
 
 module.exports = {
     homePage : function(req,res){
@@ -15,8 +16,14 @@ module.exports = {
     enCartelera : function(req,res){
 
     },
-    masVotadas : function(){
-
+    masVotadas : function(req,res){
+        res.write(masVotadas.titulo+'\n\n')
+        res.write(`El total de peliculas es: ${masVotadas.total()}\n`)
+        res.write(`El valoración general es: ${masVotadas.promedio()}\n`)
+        votadas.forEach(peli => {
+            res.write(`-${peli.title}\nValoración: ${peli.vote_average}\n${peli.overview}\n\n`)
+        })
+        res.end()
     },
     contacto : function(){
 
