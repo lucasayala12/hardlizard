@@ -17,6 +17,7 @@ module.exports = {
         movies.forEach(movie => {
             res.write(`Título: ${movie.title} \n\n`)
         });
+        res.write(homePage.pie)
         res.end()
     },
     enCartelera: function (req, res) {

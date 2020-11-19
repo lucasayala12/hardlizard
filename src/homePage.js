@@ -15,5 +15,6 @@ module.exports = {
     },
     mensaje : `​Bienvenidos a DH Movies el mejor sitio para encontrar las mejores
     películas, incluso mucho mejor que Netflix, Cuevana y PopCorn​.
-    \n\n`
+    \n\n`,
+    pie : `Recorda que podes visitar las secciones:\n-En cartelera\n-Mas votadas\n-Sucursales\n-Contacto\n-Preguntas frecuentes`
 }
